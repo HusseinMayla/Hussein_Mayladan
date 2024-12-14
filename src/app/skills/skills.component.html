@@ -1,0 +1,28 @@
+<main>
+  <h1>My Skills:</h1>
+  <section class="skillsection">
+    <div class="menu">
+      <label class="sortby" for="select">Sort By:</label>
+      <select class="sort" [(ngModel)]="sorttype" (change)="applySorting()">
+        <option value="AZ">A~Z</option>
+        <option value="pro">Profession</option>
+      </select>
+      <button class="order" (click)="ordersort()">
+        <mat-icon [ngClass]="order">arrow_upward</mat-icon>
+      </button>
+    </div>
+    <div class="skills">
+      <section
+        class="skill"
+        *ngFor="let skill of skills; let skillindex = index"
+        [ngClass]="getclass(skillindex)"
+      >
+        <h2 [ngClass]="skill.level" class="enchanted">{{ skill.name }}</h2>
+        <p>{{ skill.description }}</p>
+      </section>
+    </div>
+  </section>
+  <ng-template #loading>
+    <div class="loading">Loading...</div>
+  </ng-template>
+</main>

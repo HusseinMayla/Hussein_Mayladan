@@ -1,0 +1,73 @@
+.topnav{
+    top: 0;
+    right: 0;
+    width: calc(100vw - 100px);
+    height: 5rem;
+    /* background: linear-gradient(145deg, rgb(0, 102, 255), rgb(124, 246, 255));
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff; */
+padding:0.5rem ;
+align-content: center;
+justify-items: center;
+position: fixed;
+z-index: 1;
+}
+.Component_Lists{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    justify-content: center;
+    width: 55%;
+    height: 100%;
+}
+.Component_Lists li{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    height: 100%;
+}
+.about{
+    color: rgb(192, 176, 58);
+    border-bottom: 1px solid gold;
+}
+.Component_Lists li a{
+    text-decoration: none;
+    color: white;
+    /* font-weight: bold; */
+    /* border-bottom: 1px solid gold; */
+    cursor: pointer;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.Component_Lists li a:hover {
+    color: rgb(192, 176, 58);
+    scale: 1.1;
+}
+.botnav{
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: fixed;
+    width: 100px;
+    border-right: 1px solid #3f3f3f;
+    z-index: 2;
+}
+.navbut{
+    width: 100px;
+    height: 100px;
+    background-color: #3f3f3f;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+.navbut mat-icon{
+    align-content: center;
+    width: fit-content;
+    height: fit-content;
+    font-size: 2.3rem;
+}
